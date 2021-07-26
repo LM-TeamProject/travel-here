@@ -6,8 +6,8 @@ function LoginFooter() {
   const history = useHistory();
 
   const routeChange = () => {
-    let path = 'newPath';
-    history.push('/');
+    let path = '/';
+    history.push(path);
   };
 
   return (
