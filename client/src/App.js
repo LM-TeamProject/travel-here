@@ -13,6 +13,7 @@ import Board from 'pages/Board'
 import Home from "pages/Home";
 import Login from "pages/Login";
 import NotFound from "pages/NotFound";
+import Post from 'pages/Post/Post';
 
 function App() {  
   return (
@@ -23,6 +24,7 @@ function App() {
         <Switch>
           <Route exact path="/categorylist" component={CategoryList} />
           <Route path="/categorylist/:religion" component={Board} />
+          <Route path="/post" component={Post} />
           <Route path="/login" component={Login} />
           <Route exact path="/" component={Home} />
           <Route component={NotFound} />
