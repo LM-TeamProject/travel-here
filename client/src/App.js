@@ -12,6 +12,7 @@ import CategoryList from './pages/CategoryList';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
+
 function App() {
   return (
     <S.Background className="App">

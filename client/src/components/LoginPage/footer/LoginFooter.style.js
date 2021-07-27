@@ -15,18 +15,24 @@ const Li = styled.li`
 
 const Ul = styled.ul`
   display: flex;
+  justify-content: space-around;
   @media screen and (max-width: 740px) {
     flex-direction: column;
   }
 `;
 
 const Button = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: none;
   background-color: transparent;
   cursor: pointer;
   width: 100%;
   @media screen and (max-width: 740px) {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     font-size: 24px;

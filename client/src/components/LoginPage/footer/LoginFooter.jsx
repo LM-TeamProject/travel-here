@@ -2,7 +2,13 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import * as S from './LoginFooter.style';
 
-function LoginFooter() {
+function LoginFooter({ authService }) {
+  const onLogin = (event) => {
+    authService //
+      .login(event.currentTarget.textContent)
+      .then(console.log);
+  };
+
   const history = useHistory();
 
   const routeChange = () => {
@@ -15,27 +21,28 @@ function LoginFooter() {
       <footer>
         <S.Ul>
           <S.Li>
-            <S.Button>
+            <S.Button onClick={onLogin}>
+              {/* Google */}
               <S.SignUpLogo>
                 <i className="fab fa-google"></i>
               </S.SignUpLogo>
-              <S.P>Sign in with Google</S.P>
+              <S.P>Google</S.P>
             </S.Button>
           </S.Li>
           <S.Li>
-            <S.Button>
+            <S.Button onClick={onLogin}>
               <S.SignUpLogo>
                 <i className="fab fa-apple"></i>
               </S.SignUpLogo>
-              <S.P>Sign in with Apple</S.P>
+              <S.P>Github</S.P>
             </S.Button>
           </S.Li>
           <S.Li>
-            <S.Button>
+            <S.Button onClick={onLogin}>
               <S.SignUpLogo>
                 <i className="fab fa-facebook-square"></i>
               </S.SignUpLogo>
-              <S.P>Sign in with Facebook</S.P>
+              <S.P>Facebook</S.P>
             </S.Button>
           </S.Li>
         </S.Ul>
