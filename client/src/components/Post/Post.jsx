@@ -9,23 +9,36 @@ import * as S from "./Post.style";
 const Post = (props) => {
   const images = useRef();
   let [post_like, setPost_like] = useState(false);
-  let [isMouseDown, setIsMouseDown] = useState(false);
+  // let [isMouseDown, setIsMouseDown] = useState(false);
 
-  const onMouseDown = (e) => {
+  const [isDrag, setIsDrag] = useState(false);
+  const [startX, setStartX] = useState();
 
+
+  const onDragStart = (e) => {
+    e.preventDefault();
+    setIsDrag(true);
+    setStartX(e.pageX + images.current.scrollLeft);
   }
 
-  const onMouseUp = (e) => {
-    
+  const onDragEnd = (e) => {
+    setIsDrag(false);
   }
 
-  const onMouseMove = (e) => {
-    
+  const onDragMove = (e) => {
+    if (isDrag) {
+      const { scrollWidth, clientWidth, scrollLeft } = images.current;
+  
+      images.current.scrollLeft = startX - e.pageX;
+  
+      if (scrollLeft === 0) {
+        setStartX(e.pageX);
+      } else if (scrollWidth <= clientWidth + scrollLeft) {
+        setStartX(e.pageX + scrollLeft);
+      }
+    }
   }
 
-  const onMouseLeave = (e) => {
-    
-  }
 
   return (
     <S.Container>
@@ -37,10 +50,10 @@ const Post = (props) => {
           </S.Header>
           <S.Images
             ref={images}
-            onMouseDown={e=>onMouseDown(e)}
-            onMouseUp={e=>onMouseUp(e)}
-            onMouseMove={e=>onMouseMove(e)}
-            onMouseLeave={e=>onMouseLeave(e)}
+            onMouseDown={e=>onDragStart(e)}
+            onMouseUp={e=>onDragEnd(e)}
+            onMouseMove={e=>onDragMove(e)}
+            onMouseLeave={e=>onDragEnd(e)}
           >
               <img></img>
               <img></img>
@@ -57,11 +70,6 @@ const Post = (props) => {
           </S.Title>
           <S.Like>
             <span>27 Likes</span>
-            {/* <FontAwesomeIcon icon={faHeart}/> */}
-            {/* <FavoriteIcon /> */}
-            {/* {post_like ?
-            <S.FullLike><i class="fas fa-heart"></i></S.FullLike> :
-            <S.EmptyLike><i class="far fa-heart"></i></S.EmptyLike>} */}
             {post_like ?
             <i class="fas fa-thumbs-up"></i> :
             <i class="far fa-thumbs-up"></i>}

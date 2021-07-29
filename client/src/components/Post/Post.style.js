@@ -77,6 +77,7 @@ const Profile = styled.li`
 
 const Title = styled.li`
   ${marginTop};
+  line-height: 1.3;
 `;
 
 const Like = styled.li`
