@@ -32,11 +32,10 @@ const PostCard = ({ postData, location, view }) => {
 
   // let view = useSelector((state)=>state.view.view);
 
-
-
   // 개별 post
-  const { post_id, post_title, post_region, post_view, post_profile_img, post_date } = postData;
+  const { post_id, post_title, post_region, post_view, post_profile_img, post_date, post_writer } = postData;
   
+
   // post모달 띄우는 용도
   const [isPostOpened, setIsPostOpened] = useState(false);
 
@@ -104,7 +103,7 @@ const PostCard = ({ postData, location, view }) => {
             observer.unobserve(entry.target) // 1. 화면에서 나갈 때, 다시 발생안시키기 위해 2. element가 들어가야해서 .target 
             getRepImage(repImageName.current)
             getProfileImage(profileImageName.current)
-            setTimeout(() => setIsView(true), 1400);
+            setTimeout(() => setIsView(true), 1000);
           }
         })
       },{ threshold : 0.3 })
@@ -149,14 +148,14 @@ const PostCard = ({ postData, location, view }) => {
         <S.Profile>
           <img src={post_profile_img} alt="프로필 사진" />
           <div>        
-            <h2>UserName</h2>
+            {post_writer ? <h2>{post_writer}</h2> : <h2>익명</h2>}
             <h5>#{post_region}</h5>
           </div>
           <p>{post_view}</p>
         </S.Profile>
         <S.Content>
           <h2>{post_title}</h2>
-            <img src={repImage} alt="여행 사진" /> 
+            {repImage && <img src={repImage} alt="여행 사진" /> }
           <div>{getDate(post_date)}</div>
         </S.Content>
       </S.Container>
