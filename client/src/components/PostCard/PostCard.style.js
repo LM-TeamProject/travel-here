@@ -4,7 +4,6 @@ const Container = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   min-width : 300px;
   max-width : 300px;
-  min-height : 200px;
   border-radius: 1.5rem;
   box-shadow : 0 0 4px #f40057;
   color : white;
