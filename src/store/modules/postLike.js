@@ -44,7 +44,6 @@ const reducer = (prevState = initialState, action) => {
         break;
       case LIKE_LIKE:
         draft.likeNum = action.payload.num+1;
-        console.log('like', action.payload);
         dbService.collection('post').doc(action.payload.id).update({
           post_like: draft.likeNum,
         });
@@ -59,7 +58,6 @@ const reducer = (prevState = initialState, action) => {
           return;
         }
         draft.likeNum = action.payload.num-1;
-        console.log('nonelike',action.payload);
         dbService.collection('post').doc(action.payload.id).update({
           post_like: draft.likeNum,
         });
@@ -97,12 +95,10 @@ export const likeMiddleware = (id, type) => async dispatch => {
       return;
     }
     if(type === 'like'){
-      console.log(arr);
       dispatch(onLike(arr));
       return;
     }
     if(type === 'noneLike'){
-      console.log(arr);
       dispatch(onNoneLike(arr));
       return;
     }

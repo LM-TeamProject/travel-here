@@ -58,6 +58,8 @@ export const userMiddleware = (password) => async (dispatch) => {
             return;
         }
       })
+    } finally {
+      
     }
 };
 
