@@ -36,18 +36,22 @@ const reducer = (prevState = initialState, action) => {
         dbService.collection('post').doc(action.payload.id).update({
           post_view: draft.view,
         });
-        dbService.collection('comment').doc(action.payload.comId).update({
-          post_view: draft.view,
-        });
+        if(action.payload.comId){
+          dbService.collection('comment').doc(action.payload.comId).update({
+            post_view: draft.view,
+          });
+        }
         break;
       case PLUS_VIEW:
         draft.view = action.payload.num+1;
         dbService.collection('post').doc(action.payload.id).update({
           post_view: draft.view,
         });
-        dbService.collection('comment').doc(action.payload.comId).update({
-          post_view: draft.view,
-        });
+        if(action.payload.comId){
+          dbService.collection('comment').doc(action.payload.comId).update({
+            post_view: draft.view,
+          });
+        }
         break;
       default:
         return prevState;
@@ -64,9 +68,13 @@ export const viewMiddleware = (id, type) => async dispatch => {
     response.forEach(doc => {
       obj.num = doc.data().post_view;
     })
-    com.forEach(doc => {
-      obj.comId = doc.data().comment_id;
-    })
+    if(com){
+      com.forEach(doc => {
+        obj.comId = doc.data().comment_id;
+      })
+    }else{
+      obj.comId = null;
+    }
     if(type === 'view'){
       dispatch(plusView(obj));
       return;

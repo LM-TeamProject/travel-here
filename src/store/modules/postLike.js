@@ -44,24 +44,30 @@ const reducer = (prevState = initialState, action) => {
         break;
       case LIKE_LIKE:
         draft.likeNum = action.payload.num+1;
+        console.log('like', action.payload);
         dbService.collection('post').doc(action.payload.id).update({
           post_like: draft.likeNum,
         });
-        dbService.collection('comment').doc(action.payload.comId).update({
-          post_like: draft.likeNum,
-        });
+        if(action.payload.comId){
+          dbService.collection('comment').doc(action.payload.comId).update({
+            post_like: draft.likeNum,
+          });
+        }
         break;
       case LIKE_NONLIKE:
         if(draft.likeNum === 0){
           return;
         }
         draft.likeNum = action.payload.num-1;
+        console.log('nonelike',action.payload);
         dbService.collection('post').doc(action.payload.id).update({
           post_like: draft.likeNum,
         });
-        dbService.collection('comment').doc(action.payload.comId).update({
-          post_like: draft.likeNum,
-        });
+        if(action.payload.comId){
+          dbService.collection('comment').doc(action.payload.comId).update({
+            post_like: draft.likeNum,
+          });
+        }
         break;
       default:
         return prevState;
@@ -79,18 +85,24 @@ export const likeMiddleware = (id, type) => async dispatch => {
       arr.num = doc.data().post_like;
       arr.id = id;
     })
-    com.forEach(doc => {
-      arr.comId = doc.data().comment_id;
-    })
+    if(com){
+      com.forEach(doc => {
+        arr.comId = doc.data().comment_id;
+      })
+    }else{
+      arr.comId = null;
+    }
     if(type === 'init'){
       dispatch(getLike(arr));
       return;
     }
     if(type === 'like'){
+      console.log(arr);
       dispatch(onLike(arr));
       return;
     }
     if(type === 'noneLike'){
+      console.log(arr);
       dispatch(onNoneLike(arr));
       return;
     }
