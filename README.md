@@ -2,6 +2,8 @@
 
 ✈ travel-here는 전 세계의 여행후기글을 볼 수 있는 여행후기 플랫폼입니다.
 
+[사이트 보러가기](https://travelhere.netlify.app)
+
 <a href="https://www.figma.com/file/dTugkNDMoHBZrPUQvRB7hS/TravelApp" target="_blank">FIGMA 프로토타입</a>
 
 <br>
