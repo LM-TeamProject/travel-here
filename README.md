@@ -6,6 +6,10 @@
 
 <a href="https://www.figma.com/file/dTugkNDMoHBZrPUQvRB7hS/TravelApp" target="_blank">FIGMA 프로토타입</a>
 
+로그인 디자인 참고 사이트
+
+[Codemyui](https://codemyui.com/)
+
 <br>
 
 ## 목차
