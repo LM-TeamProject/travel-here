@@ -67,7 +67,6 @@ function LoginModalOpen() {
         switch (err.code) {
           case 'auth/email-already-in-use':
           case 'auth/invalid-email':
-          case 'auth/account-exists-with-different-credential':
             setEmailError(err.message);
             break;
           case 'auth/weak-password':
