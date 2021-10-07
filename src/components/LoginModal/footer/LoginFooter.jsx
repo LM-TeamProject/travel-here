@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import * as S from './LoginFooter.style';
 
 function LoginFooter({ authService }) {
+  const [emailError, setEmailError] = useState('');
   const history = useHistory();
   // 로그아웃 페이지 전환
   const goToLogin = (userId) => {
@@ -23,6 +24,15 @@ function LoginFooter({ authService }) {
       .login(event.currentTarget.textContent)
       .then((data) => {
         goToLogin(data.user.uid);
+      })
+      .catch((err) => {
+        switch (err.code) {
+          case 'auth/account-exists-with-different-credential':
+            setEmailError(err.message);
+            break;
+          default:
+            return;
+        }
       });
   };
 
@@ -63,6 +73,7 @@ function LoginFooter({ authService }) {
               <p>Twitter</p>
             </button>
           </li>
+          <p className="errorMsg">{emailError}</p>
         </ul>
         {/* Home return button */}
         <button className="closeBtn" onClick={routeChange}>
