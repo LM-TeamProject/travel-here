@@ -316,7 +316,7 @@ $ yarn start
 
 ![travel-6마이페이지비번](https://user-images.githubusercontent.com/76847993/136292010-dc36778b-d97b-4f8b-b1c7-b369333f9982.gif)
 
-##### 탈퇴하기를 클릭하면 탈퇴 여부를 선택하여 탈퇴 할 수 있다.
+##### 탈퇴하기를 클릭하면 탈퇴 여부를 선택하여 탈퇴 할 수 있습니다.
 
 ![travel-6탈퇴](https://user-images.githubusercontent.com/76847993/136292065-72bd4b64-6ab7-4be6-978b-b6dab295ff08.gif)
 <<<<<<< HEAD
