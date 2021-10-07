@@ -6,10 +6,6 @@
 
 <a href="https://www.figma.com/file/dTugkNDMoHBZrPUQvRB7hS/TravelApp" target="_blank">FIGMA 프로토타입</a>
 
-로그인 디자인 참고 사이트
-
-[Codemyui](https://codemyui.com/)
-
 <br>
 
 ## 목차
@@ -206,50 +202,50 @@ $ yarn start
 <details>
   <summary>상세보기</summary>
 
-#### 이메일과 비밀번호로 회원가입
+#### 이메일과 비밀번호로 로그인/회원가입
 
-![회원가입(이메일)](https://user-images.githubusercontent.com/70390705/132844269-c65c4ce8-5258-4201-a793-44dc995242a9.gif)
-
-#### 이메일과 비밀번호로 로그인
-
-![로그인(이메일)](https://user-images.githubusercontent.com/70390705/132844272-6fd218f7-bd29-4ad9-b325-c94abec20b14.gif)
+![travel-1이메일로그인회원가입!](https://user-images.githubusercontent.com/76847993/136286365-bc839a8d-f9fb-43d4-920e-20419fe781bb.gif)
 
 #### SNS 로그인
 
-![SNS로그인](https://user-images.githubusercontent.com/70390705/132844271-a5940536-5faf-42c1-9fb4-593f81f5a79b.gif)
+![travel-1sns로그인!](https://user-images.githubusercontent.com/76847993/136286912-be4ce264-a12e-40ce-a093-dfdd32ded87c.gif)
 
-#### 재설정 이메일 보내기를 통해 비밀번호 변경
+#### SNS 회원가입
 
-![비밀번호 재설정(이메일)](https://user-images.githubusercontent.com/70390705/132844253-a75dd3a3-7cf0-49e7-bb19-0205bb588232.gif)
+![travel-1sns회원가입!](https://user-images.githubusercontent.com/76847993/136287256-4eac9790-9022-45b1-bedd-946360b41736.gif)
+
+#### 로그인/회원가입 오류메세지
+
+##### 로그인 비밀번호 오류가 나면 비밀번호 재설정 버튼이 생성됩니다.
+
+![travel-1로그인회원가입오류들!](https://user-images.githubusercontent.com/76847993/136287310-ca03a820-5ada-416f-bc0f-4f2b10f57a83.gif)
+
+#### 비밀번호 재설정
+
+##### 이메일로 비밀번호 재설정을 안내합니다.
+
+![travel-1비번변경!](https://user-images.githubusercontent.com/76847993/136287350-0326ba83-91da-4a39-a2d5-3dc4c2c6c365.gif)
 
 </details>
 
 <hr />
 
-### 글쓰기
+### 게시글 쓰기
 
 <details>
   <summary>상세보기</summary>
 
-#### 글등록
+#### 전체적인 게시글쓰기 스타일
 
-![글쓰기](https://user-images.githubusercontent.com/64853423/132875402-d9ff8fc1-b00f-4a33-8281-a456a025b72d.gif)
+##### 제목, 내용, 지역은 필수작성으로 입력내용 없이 등록을 누르면 알림문구가 뜹니다.
 
-#### 사진 추가
-
-![사진추가](https://user-images.githubusercontent.com/64853423/132875541-edf81368-d9b6-4963-a6fd-bed40a4e8d8b.gif)
-
-#### 사진 삭제
-
-![사진삭제](https://user-images.githubusercontent.com/64853423/132875556-faf4a801-0c25-4469-941a-cb651cd1f458.gif)
+![travel-2글쓰기스타일!](https://user-images.githubusercontent.com/76847993/136287411-84c3db9f-3332-4168-81f6-f7e3893deb3f.gif)
 
 #### 글등록
 
-![글등록](https://user-images.githubusercontent.com/64853423/132875577-385d9f76-ac3c-4673-9ac9-6d29ff2a50f4.gif)
+##### 제목, 내용, 지역, 사진(선택)을 작성한 후 등록을 누르면 해당 게시글로 바로 이동합니다.
 
-#### 취소
-
-![취소](https://user-images.githubusercontent.com/64853423/132875585-06c828c5-cdc6-4ffc-8761-0af2fb956f5d.gif)
+![travel-2글쓰기!](https://user-images.githubusercontent.com/76847993/136287437-1393ef3c-c751-4d85-81f8-7d16d6e2b662.gif)
 
 </details>
 
@@ -260,13 +256,11 @@ $ yarn start
 <details>
   <summary>상세보기</summary>
 
-#### 지역별 게시글 모아보기
+#### 카테고리 --> 게시판
 
-![1](https://user-images.githubusercontent.com/68575268/132719758-2d850047-15f5-4ca7-aa17-906db95c3ff2.gif)
+##### 지역별 카테고리에서 특정지역을 선택하면, 해당 지역의 게시글들을 모아볼 수 있습니다. <br /> 특정 게시글을 선택하면 해당 게시글이 띄워집니다.
 
-#### 보고 싶은 게시글 선택하여 살펴보기
-
-![Animation](https://user-images.githubusercontent.com/68575268/132719768-569010ba-cf96-4f05-a61d-9e9cbdbde56c.gif)
+![용줄3카테고리](https://user-images.githubusercontent.com/76847993/136288753-7fd103fa-0ccb-4bca-9d8f-8fc5b7832997.gif)
 
 </details>
 
@@ -277,21 +271,17 @@ $ yarn start
 <details>
   <summary>상세보기</summary>
 
-#### 댓글, 좋아요, 북마크, 조회수 기능
+#### 좋아요, 북마크 기능
 
-![댓글 좋아요 북마크](https://user-images.githubusercontent.com/68575268/132719775-c3c39141-d7b4-4378-a15e-af001d826d67.gif)
+![travel-5좋아요찜!](https://user-images.githubusercontent.com/76847993/136291948-a9a4fa17-402d-431e-b439-6d2e38ca32cb.gif)
 
-#### 본인일 경우에만 수정, 삭제가 가능합니다.
+#### 게시글, 댓글은 본인일 경우에만 수정/삭제가 가능
 
-![userCheck](https://user-images.githubusercontent.com/76847993/132731934-c1f3b034-435e-4598-a0c3-bcc31b1a0107.gif)
+![travel-5본일일때수정삭제토글!](https://user-images.githubusercontent.com/76847993/136291909-08cd9788-c130-401a-85a4-57f855f183ef.gif)
 
-#### 게시글 수정, 삭제 기능
+#### 게시글, 댓글의 수정/삭제 기능
 
-![게시글수정삭제](https://user-images.githubusercontent.com/76847993/132734801-c0b5a8ff-a8e9-48ea-85b5-ec7d9c40de0f.gif)
-
-#### 댓글, 수정 삭제 기능
-
-![댓글수정삭제!](https://user-images.githubusercontent.com/76847993/132733887-c9871c4c-8577-4604-b872-4fb3ed654c85.gif)
+![travel-5수정삭제!](https://user-images.githubusercontent.com/76847993/136289288-4a7fb6a0-a349-47fa-a164-38c20eaf3ca2.gif)
 
 </details>
 
@@ -302,29 +292,38 @@ $ yarn start
 <details>
   <summary>상세보기</summary>
 
-#### 전체적인 디자인입니다. 왼쪽창에서 같은 목록, 또는 오른쪽 창에서 < 아이콘을 누르면 창이 닫힙니다.
+##### 전체적인 마이페이지 디자인입니다. <br /> 왼쪽창에서 같은 목록, 또는 오른쪽 창에서 < 아이콘을 누르면 창이 닫힙니다.
 
-![total_design](https://user-images.githubusercontent.com/76847993/132723722-3d5cf309-8c99-49fb-8d27-c646b82e1710.gif)
+![travel-6마이페이지스타일](https://user-images.githubusercontent.com/76847993/136289407-5e61acec-7341-4b1b-9e45-0304e1d5155a.gif)
 
-#### 닉네임, 프로필사진 수정 기능입니다. <br />프로필사진은 기본사진이 아닐 때 수정할 경우 '기본사진으로 변경' 버튼이 추가됩니다.
+##### 닉네임, 프로필사진 수정 기능입니다. <br />프로필사진은 기본사진이 아닐 때 수정할 경우 '기본사진으로 변경' 버튼이 추가됩니다.
 
-![change2!](https://user-images.githubusercontent.com/76847993/132722552-1ce85841-1b46-4d2b-88a0-cde033609535.gif)
+![travel-6닉네임사진수정](https://user-images.githubusercontent.com/76847993/136291987-0b3bfc9e-678b-49f3-b4ec-da83a250e936.gif)
 
-#### 수정사항은 게시글쓰기, 게시글, 댓글에서 모두 바로 반영됩니다.
+##### 수정사항은 게시글쓰기, 게시글, 댓글에서 모두 바로 반영됩니다.
 
-![즉시반영!](https://user-images.githubusercontent.com/76847993/132729254-6f2a93d3-24e0-4417-b5bb-00ccd9b8d19c.gif)
+![travel-6즉시반영](https://user-images.githubusercontent.com/76847993/136289717-7c15bdd8-fde0-4c1c-8a76-b1342ad62b2f.gif)
 
-#### 내가 쓴 글, 댓글, 찜 목록을 클릭하면 해당 게시글로 이동합니다.
+##### 내가 쓴 글, 댓글, 찜 목록을 클릭하면 해당 게시글로 이동합니다.
 
-![move](https://user-images.githubusercontent.com/76847993/132723763-782ae28d-3753-4055-ba72-ef37a1d46860.gif)
+![travel-6마이페이지이동](https://user-images.githubusercontent.com/76847993/136289562-2d24bd3a-c662-458c-9855-3e1558dceea8.gif)
 
-#### 비밀번호 변경 시 현재 비밀번호로 재인증을 한 후 맞게 입력한 경우에만 변경이 가능합니다.
+##### 이메일로 로그인 했을 때에만 비밀번호 변경 창이 뜹니다.
 
-![password](https://user-images.githubusercontent.com/76847993/132725017-0a5abc0e-ecdc-4182-8765-101f6fed00ec.gif)
+![travel-6비번변경창유무](https://user-images.githubusercontent.com/76847993/136292038-7153b5a1-f730-4edb-9d15-bc7912ccb4e5.gif)
 
-#### 탈퇴하기를 클릭하면 탈퇴 여부를 선택하여 탈퇴 할 수 있다.
+##### 비밀번호 변경 시 현재 비밀번호로 재인증을 한 후 맞게 입력한 경우에만 변경이 가능합니다.
 
-![탈퇴하기](https://user-images.githubusercontent.com/70390705/132844265-6ac071ac-08b2-4205-a9d6-36288ac76496.gif)
+![travel-6마이페이지비번](https://user-images.githubusercontent.com/76847993/136292010-dc36778b-d97b-4f8b-b1c7-b369333f9982.gif)
+
+##### 탈퇴하기를 클릭하면 탈퇴 여부를 선택하여 탈퇴 할 수 있다.
+
+![travel-6탈퇴](https://user-images.githubusercontent.com/76847993/136292065-72bd4b64-6ab7-4be6-978b-b6dab295ff08.gif)
+<<<<<<< HEAD
+
+=======
+
+> > > > > > > 4f0eadb483c70d3b97a8c424827c5fc5e7b39b76
 
 </details>
 
@@ -337,7 +336,7 @@ $ yarn start
 
 #### 로그인하지않고 게시글을 클릭하면 다음과같은 창이 뜹니다.
 
-![비회원](https://user-images.githubusercontent.com/76847993/132726677-781f23d7-49e4-4a4c-a93d-2878abeb101d.gif)
+![travel-7비회원!](https://user-images.githubusercontent.com/76847993/136292105-f76f7f15-a862-48e6-bf2d-103d89e59b42.gif)
 
 #### 또한 navBar에 mypage, 우측하단 게시글쓰기 버튼이 뜨지 않습니다.
 
@@ -352,7 +351,32 @@ $ yarn start
 
 #### 404오류 화면입니다.
 
-![notFound](https://user-images.githubusercontent.com/76847993/132727674-32ab58a5-332e-40a9-9131-af9b2c9b0750.gif)
+![travel-7_404!](https://user-images.githubusercontent.com/76847993/136292096-bffeb524-b2be-44e5-85d8-5f9fad927785.gif)
+
+</details>
+
+<hr />
+
+### 반응형
+
+<details>
+  <summary>상세보기</summary>
+
+#### 로그인/회원가입 반응형
+
+![travel-로그인반응형!](https://user-images.githubusercontent.com/76847993/136291116-e977388c-553a-4a94-a100-22c6f21baafd.gif)
+
+#### 게시판/게시글 반응형
+
+![post반응형](https://user-images.githubusercontent.com/76847993/136290279-c9ce740d-4035-4aeb-852f-97d1dde120f4.gif)
+
+#### 마이페이지 반응형
+
+![마이페이지반응형](https://user-images.githubusercontent.com/76847993/136291784-66c41cb5-6641-44fd-a1f5-65c5df12545e.gif)
+
+#### 카테고리, 게시글 쓰기, 알림창 반응형
+
+![각종반응형](https://user-images.githubusercontent.com/76847993/136290745-eda46a4f-59ae-45e0-85d4-b094d3b4a4a4.gif)
 
 </details>
 
@@ -373,32 +397,25 @@ $ yarn start
     <td class="title right">개선할 점</td>
   </tr>
   <tr>
-    <td rowspan="6" class="phj">박현정</td>
+    <td rowspan="5" class="phj">박현정</td>
     <td>역할 분배를 페이지별로 했더니 특정 사람에게 너무 많은 역할이 주어졌습니다.</td>
     <td>개발을 시작하기 전에 기능별 정의를 분명하게 하고 그 기능별로 역할 분배를 해야겠다고 느꼈습니다.</td>
   </tr>
   <tr>
     <td>리덕스의 action이 너무 많아진 느낌입니다.</td>
-    <td>개발을 하면서 그때그때 중복된 부분을 정리해야할 것 같습니다.
-</td>
+    <td>개발을 하면서 그때그때 중복된 부분을 정리해야할 것 같습니다.</td>
   </tr>
   <tr>
     <td>데이터를 정의할 때 어떤 type의 값을 넣을건지를 정확히 정하지 않아 나중에 수정할 일이 많았습니다.</td>
-    <td>개발 전 단계에서 데이터타입을 정확하게 해야겠다고 느꼈습니다. 예를 들어 post id는 string타입의 date.now로 하자는 식으로요.
-</td>
+    <td>개발 전 단계에서 데이터타입을 정확하게 해야겠다고 느꼈습니다. 예를 들어 post id는 string타입의 date.now로 하자는 식으로요.</td>
   </tr>
   <tr>
     <td>firebase와 redux상태간의 정확한 정리가 없어 헷갈리는 일이 많았습니다.	</td>
-    <td>firebase에서 받아오는 사용자와, redux에서의 사용자를 서류상으로 정확하게 명시해놓고 각각 어떻게 쓸것인지 팀원들과 정의하는 시간을 가져야할 것 같습니다.
-</td>
+    <td>firebase에서 받아오는 사용자와, redux에서의 사용자를 서류상으로 정확하게 명시해놓고 각각 어떻게 쓸것인지 팀원들과 정의하는 시간을 가져야할 것 같습니다.</td>
   </tr>
   <tr>
     <td>코드리뷰가 적극적으로 이루어지지 않았던 것 같습니다. 제가 짠 코드가 괜찮은 코드인지 아닌지를 판단하기 어려웠고, 팀원이 짠 코드를 제대로 파악하기 힘들었습니다.</td>
-    <td>팀프로젝트이니만큼 프로젝트에 사용된 코드에 모두가 책임감을 가져야한다고 생각합니다. 그 책임감을 지려면 어느정도 코드리뷰에 강제성이 있어야될 것 같습니다.
-</td>
-  </tr>
-  <tr>
-    <td colspan="2">*** 개발 외 힘들었던 점 *** <br /> 디자인 시안의 부재.. 디자이너의 필요성을 느꼈습니다.</td>
+    <td>팀프로젝트이니만큼 프로젝트에 사용된 코드에 모두가 책임감을 가져야한다고 생각합니다. 그 책임감을 지려면 어느정도 코드리뷰에 강제성이 있어야될 것 같습니다.</td>
   </tr>
   <tr>
     <td rowspan="3" class="khs">김현수</td>
