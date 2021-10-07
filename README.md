@@ -319,11 +319,6 @@ $ yarn start
 ##### 탈퇴하기를 클릭하면 탈퇴 여부를 선택하여 탈퇴 할 수 있습니다.
 
 ![travel-6탈퇴](https://user-images.githubusercontent.com/76847993/136292065-72bd4b64-6ab7-4be6-978b-b6dab295ff08.gif)
-<<<<<<< HEAD
-
-=======
-
-> > > > > > > 4f0eadb483c70d3b97a8c424827c5fc5e7b39b76
 
 </details>
 
