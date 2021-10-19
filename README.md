@@ -197,6 +197,10 @@ $ yarn start
 
 <hr />
 
+### 시연영상
+
+https://www.youtube.com/watch?v=E1qkUKJi3Ho
+
 ### 로그인
 
 <details>
